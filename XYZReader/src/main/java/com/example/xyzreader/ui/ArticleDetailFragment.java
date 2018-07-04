@@ -145,7 +145,7 @@ public class ArticleDetailFragment extends Fragment implements
             public void onClick(View view) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                         .setType("text/plain")
-                        .setText("Some sample text")
+                        .setText("Reading "+ ((TextView)getView().findViewById(R.id.article_title)).getText().toString() +" "+ ((TextView)getView().findViewById(R.id.article_byline)).getText().toString() +" here, I can only recommend it!")
                         .getIntent(), getString(R.string.action_share)));
             }
         });
